@@ -1,0 +1,76 @@
+<!-- Data Tables -->
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins" style="background: white;padding: 10px">
+                <!-- 表单标题概要 -->
+                <div class="ibox-title">
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- 表单内容 -->
+                <div class="ibox-content">
+                    <!-- 用户控件（操作） -->
+                    <div id="toolbar" class="toolbar" data-module="/admin/Article">
+                    	<div class="btn-group">
+                    		<button type="button" data-name="add" class="btn btn-primary" data-event-type="view" data-event-value="{:url('admin/article/add',['father'=>$moduleID,'uid'=>$uid])}"  data-target="modal"><i class="fa fa-plus" aria-hidden="true" style="margin-right: 2px"> </i>添加</button>
+                    		<button type="button" data-name="delete" class="btn btn-default" data-event-type="default" data-event-value="{:url('admin/article/delete',['uid'=>$uid])}" data-target="modal"><i class="fa fa-trash" aria-hidden="true" style="margin-right: 2px"> </i>删除</button>
+                    	</div>
+                    </div>
+                    <!-- 表格数据 -->
+                    <table id="table" data-toggle="gridview" class="table" data-url="{:url('admin/article/getlist',['father'=>$moduleID,'uid'=>$uid])}" data-query-params="queryParams" data-toolbar="#toolbar" data-show-columns="true" data-page-size="10" data-page-list="[10, 25, 50, All]" data-unique-id="id" data-pagination="true" data-side-pagination="client" data-search="true" data-click-to-select="false">
+                        <thead>
+                            <tr>
+                            	<th data-field="type" data-visible="false">id</th>
+                                <th data-width="10" data-align="center" data-checkbox="true"></th>
+                                <th data-width="120" data-field="title" >题目</th>
+                                <th data-width="80" data-field="public_time" data-align="center">发布时间</th>
+                                <th data-width="50" data-field="public_person" data-align="center">发布人</th>
+                                <th data-width="20" data-field="is_sign" >签收</th>
+                                <th data-width="20" data-field="is_pic_news" data-align="center">图片新闻</th>
+                                <th data-width="80" data-field="pic_path" data-align="center">图片路径</th>
+                                <th data-width="50" data-field="operate"   data-align="center" data-formatter="operateFormatter" data-events="operateEvents">{:lang('Operate')}</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function operateFormatter(value, row, index) {
+        return [
+            '<a class="btn btn-xs edit" href="javascript:void(0)" title="{$Think.lang.Edit}">',
+            '<i class="fa fa-edit"></i>',
+            '</a>  ',
+            '<a class="btn btn-xs delete" href="javascript:void(0)" title="{$Think.lang.Delete}">',
+            '<i class="fa fa-trash"></i>',
+            '</a>'
+        ].join('');
+    }
+
+    var operateEvents = {
+        'click .edit': function (e, value, row, index) {
+            var param = {
+                url: "{:url('admin/article/edit',['uid'=>$uid]);}",
+                data: {id: row.id,
+                	   type: row.type}
+            }
+            $("#table").gridView('loadModal', param.url,param.data)
+        },
+        'click .delete': function (e, value, row, index) {
+        	var url= "{:url('admin/article/delete',['uid'=>$uid])}";
+            $("#table").gridView('deleteModal', url, row)
+            
+        }
+    };
+	
+</script>

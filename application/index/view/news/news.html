@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Yao Longfei" />
+		<!-- 作者 -->
+		<meta name="revised" content="Yao.v1, 2016/7/11" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<!-- 搜索关键字 -->
+		<title>冀州市市公安局</title>
+		<!-- 基础样式文件 开始 -->
+		<link href="__CSS__/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="__CSS__/base.css" rel="stylesheet" type="text/css">
+		<link href="__CSS__/list_wz.css" rel="stylesheet" type="text/css">
+		<!-- 基础样式文件结束 -->
+		<!-- 基础JS文件 开始 -->
+		<script type="text/javascript" src="__JS__/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="__JS__/jquery.cookie.js"></script>
+		<script type="text/javascript" src="__JS__/bootstrap.min.js"></script>
+		<script type="text/javascript" src="__JS__/base.js"></script>
+		<!-- 基础JS文件 结束 -->
+	</head>
+
+	<body>
+		<!-- top 开始 -->
+		<!-- <div class="top">
+			<div class="top_box">
+				你好，欢迎访问某某市公安局网站！&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="">登录</a>&nbsp;
+				<a>|</a>&nbsp;
+				<a href="">注册</a>
+			</div>
+		</div> -->
+		<!-- top 结束 -->
+		
+		<!-- main 开始 -->
+		<div class="main">
+			<div class="main_box">
+
+				<!-- logo 开始 -->
+				<div class="logo"></div>
+				<!-- logo 结束 -->
+
+				<!-- banner 开始 -->
+				<div class="banner">
+					<ul>
+						<li class="right_border"><a href={:url('index/index')}>网站首页</a></li>
+						<li class="right_border"><a href="list_pic.html">警务快讯</a></li>
+						<li class="right_border"><a href="list_wz.html">公文中心</a></li>
+						<li class="right_border"><a href="">警情动态</a></li>
+						<li class="right_border"><a href="">基层动态</a></li>
+						<li class="right_border"><a href="">部门工作</a></li>
+						<li class="right_border"><a href="">教育培训</a></li>
+						<li class="right_border"><a href="">机关事务</a></li>
+						<li class="right_border"><a href="">警综平台</a></li>
+						<li><a href="">指挥调度</a></li>
+					</ul>
+				</div>
+				<!-- banner 结束 -->
+
+				<!-- address 开始 -->
+				<div class="address">
+					<img src="__IMG__/address_ico.png"/><a href="javascript:void(0);">首页</a><a>：</a><a href="javascript:void(0);">{$moduleInfo.name}</a><a>&gt;</a><a href="javascript:void(0);">{$sonmoduleInfo.name}</a><a>&gt;</a><a href="javascript:void(0);">详细内容</a>
+				</div>
+				<!-- address 结束 -->
+
+				<!-- list_main 开始 -->
+				<div class="content_main" name="newscontent">
+					<div class="content_main_title">
+						{$newscontent.title}
+					</div>
+					<div class="content_main_dis">
+						发布时间：{$newscontent.public_time}    发布人：{$newscontent.public_person}    浏览次数：<font>{$newscontent.view_count}</font>次
+					</div>
+					<div class="content_main_con">
+						{$newscontent.content}
+					</div>
+					<div class="content_main_next">
+						<ul>
+							<li>上一篇：<a href={:url('news/index','id='.$newContext[0]['id'])}>{$newContext[0]['title']}</a></li>
+							<li>下一篇：<a href={:url('news/index','id='.$newContext[1]['id'])}>{$newContext[1]['title']}</a></li>
+						</ul>
+					</div>
+					<div class="content_main_qylist" style="display:none;">
+						<ul>
+							<li><a href="javascript:showQYlist()">显示签阅列表</a></li>
+							<li><a href="javascript:hideQYlist()">隐藏签阅列表</a></li>
+						</ul>
+						<div class="qylist_box">
+							<table>
+								<thead>
+									<tr>
+										<th>序号</th>
+										<th>签收部门</th>
+										<th>签收人</th>
+										<th>IP地址</th>
+										<th>是否签收</th>
+										<th>签收时间</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody id="qylist_box_tbody"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- list_main 结束 -->
+
+				<!-- bottom_banner 开始 -->
+				<div class="bottom_banner">
+					<ul>
+						<li class="right_border">
+							<a href="">系统管理</a>
+						</li>
+						<li class="right_border">
+							<a href="">金山毒霸</a>
+						</li>
+						<li class="right_border">
+							<a href="">数字证书申请</a>
+						</li>
+						<li class="right_border">
+							<a href="">一机两用注册</a>
+						</li>
+						<li class="right_border">
+							<a href="">二手机系统</a>
+						</li>
+						<li class="right_border">
+							<a href="">生活资讯</a>
+						</li>
+						<li class="right_border">
+							<a href="">安全管理平台</a>
+						</li>
+						<li class="right_border">
+							<a href="">电子邮局</a>
+						</li>
+						<li class="right_border">
+							<a href="">FTP空间</a>
+						</li>
+						<li class="right_border">
+							<a href="">终端安全助手</a>
+						</li>
+						<li>
+							<a href="">故障申告</a>
+						</li>
+					</ul>
+				</div>
+				<!-- bottom_banner 结束 -->
+
+				<!-- bottom 开始 -->
+				<div class="bottom">
+					COPYRIGHT版权所有 设计开发：公安局信息通信处&信息中心
+				</div>
+				<!-- bottom 结束 -->
+			</div>
+		</div>
+		<!-- main 结束 -->
+<script type="text/javascript">
+
+$(function () {
+
+    	//查看用户是否合法如果合法，则显示签收，否则，不显示签收模块
+    	//获取本新闻是否需要签收
+    	var is_sign = {$newscontent.is_sign};
+    	
+    	if(is_sign==1){
+    		$(".content_main_qylist").css("display","block");
+	    	checkoutSignList();
+	    }else{
+	    	$(".content_main_qylist").css("display","none");
+	    }
+    	
+})
+
+	$(function(){
+    		$(document).delegate('.operator', 'click', function(){
+    		
+			//获取ID
+    		var $id =  $(this).parent().prev().prev().prev().html();
+    		//alert("id="+$id);
+    		//alert("id"+$id);
+    		//获取userID
+    		//var $userid = $(this).parent().parent().children("td").eq(8).html();
+    		//alert("userid"+$userid);
+    		//alert($.cookie('userid'));
+    		var $userid = $.cookie('userid');
+    		//alert("userid="+$userid);
+    		//获取roleID
+    		var $roleid = $(this).parent().prev().prev().html();
+
+    		//检查用户ID
+    		$.ajax({
+
+             type: "post",
+
+             url: '{:url('login/status')}',
+
+             data: {uid:$.cookie('userid')},
+
+             dataType: "json",
+
+             success: function(data){
+			//申请cookie成功
+				alert("用户检查成功！");
+					
+		    		$.ajax({
+
+		             type: "post",
+
+		             url: '{:url('news/sign')}',
+
+		             data: {id:$id,userID:$userid,roleID:$roleid},
+
+		             dataType: "text",
+
+		             success: function(data){
+		             	alert(data);
+		             	$("#qylist_box_tbody").html("");
+		             	checkoutSignList();
+		              },
+		              error: function(XMLHttpRequest, textStatus, errorThrown) {  
+		              //#3这个error函数调试时非常有用，如果解析不正确，将会弹出错误框
+		                        alert(XMLHttpRequest.status);
+		                        alert(XMLHttpRequest.readyState);
+		                        alert(textStatus); // paser error;
+		                        alert("请求后台数据超时！");
+		              }
+		           });
+              },
+              error: function(XMLHttpRequest, textStatus, errorThrown) {  //#3这个error函数调试时非常有用，如果解析不正确，将会弹出错误框
+              	alert("用户检查失败！");
+              	
+              }
+         });
+    		
+    		
+       }); 
+    })
+
+
+    function checkoutSignList(){
+	
+    	$.ajax({
+
+             type: "post",
+
+             url: '{:url('news/getSignList')}',
+
+             data: {id:{$newscontent.id}},
+
+             dataType: "json",
+
+             success: function(data){
+             	//var dataParse = JSON.parse(data); 
+             	var dataP = data.toString();
+             	if(dataP!=null && dataP!="")
+             	{
+             	      $.each(data,function(index,item){
+		 					$("#qylist_box_tbody").append("<tr>");
+		 					$("#qylist_box_tbody").append("<td>"+(index+1)+"</td>");
+		 					$("#qylist_box_tbody").append("<td>"+item.rolename+"</td>");
+		 					$("#qylist_box_tbody").append("<td>"+item.username+"</td>");
+		 					$("#qylist_box_tbody").append("<td>"+item.sign_ip+"</td>");
+		 					$("#qylist_box_tbody").append("<td>"+item.is_sign+"</td>");
+		 					$("#qylist_box_tbody").append("<td>"+item.sign_time+"</td>");
+		 					$("#qylist_box_tbody").append("<td style='display:none'>"+{$newscontent.id}+"</td>");
+		 					//TODO：huzhonghao
+		 					//返回的roleid不对
+		 					$("#qylist_box_tbody").append("<td style='display:none'>"+item.roleid+"</td>");
+		 					$("#qylist_box_tbody").append("<td style='display:none'>"+item.userid+"</td>");
+
+		 					if(item.is_sign==0){
+		 						$("#qylist_box_tbody").append("<td><a class='operator'>签收</a></td>");
+		 					}
+		 					$("#qylist_box_tbody").append("</tr>");
+					  });
+                  }else{
+
+                  	$(".content_main_qylist").hide();                  
+                  }
+                     
+               },
+              error: function(XMLHttpRequest, textStatus, errorThrown) {  
+              //#3这个error函数调试时非常有用，如果解析不正确，将会弹出错误框
+              			$(".content_main_qylist").hide(); 
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus); // paser error;
+                        alert("请求后台数据超时！");
+              }
+         });
+    }
+	</script>
+</body>
+
+</html>

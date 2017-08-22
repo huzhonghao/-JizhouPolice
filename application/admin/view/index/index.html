@@ -1,0 +1,68 @@
+<!-- Data Tables -->
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins" style="background: white;padding: 10px">
+                <!-- 表单标题概要 -->
+                <div class="ibox-title">
+                    <h5>系统详情</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- 表单内容 -->
+                <div class="ibox-content">
+                   
+                    <!-- 表格数据 -->
+					<table width="98%" border="0" cellpadding="4" cellspacing="1" class="table">
+
+					  <tr class="ji">
+					    <td width="200">web服务器：</td>
+					    <td >{$sysInfo.os}</td>
+					  </tr>
+					  <tr class="ji">
+					    <td>PHP版本：</td>
+					    <td>{$sysInfo.version}</td>
+					  </tr>
+					  <tr class="ou">
+					    <td>ThinkPHP 版本：</td>
+					    <td>{$sysInfo.ThinkPHP}</php></td>
+					  </tr>
+					  <tr class="ji">
+					    <td>服务器时间：</td>
+					    <td>{$sysInfo.time}</td>
+					  </tr>
+					  <tr class="ou">
+					    <td>服务器系统：</td>
+					    <td>{$sysInfo.osname}</td>
+					  </tr>
+					   <tr class="ji">
+					    <td>服务器语言：</td>
+					    <td>{$sysInfo.language}</td>
+					  </tr>
+					  <tr class="ou">
+					    <td>数据库版本：</td>
+					    <td>{$sysInfo.mysql_version}</td>
+					  </tr>
+					   <tr class="ji">
+					    <td>上传限制：</td>
+					    <td>{$sysInfo.max_upload}</td>
+					  </tr>
+					  <tr class="ou">
+					    <td>上传最大时间：</td>
+					    <td>{$sysInfo.max_ex_time}</td>
+					  </tr>
+					</table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

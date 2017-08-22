@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>环境检测-{$Think.config.cms_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel='stylesheet' type='text/css' href='__STATIC__/Admin/css/admin_style.css'>
+<script type="text/javascript" src="__STATIC__/js/jquery.min.js"></script>
+<style>td{ height:22px; line-height:22px}</style>
+</head>
+<body>
+<table width="98%" border="0" cellpadding="4" cellspacing="1" class="table">
+  <tr class="table_title">
+    <td colspan="2">系统环境检测：</td>
+  </tr>
+  <tr class="ji">
+    <td width="200">web服务器：</td>
+    <td >{$sysInfo.os}</td>
+  </tr>
+  <tr class="ji">
+    <td>PHP版本：</td>
+    <td>{$sysInfo.version}</td>
+  </tr>
+  <tr class="ou">
+    <td>ThinkPHP 版本：</td>
+    <td>{$sysInfo.ThinkPHP}</php></td>
+  </tr>
+  <tr class="ji">
+    <td>服务器时间：</td>
+    <td>{$sysInfo.time}</td>
+  </tr>
+  <tr class="ou">
+    <td>服务器系统：</td>
+    <td>{$sysInfo.osname}</td>
+  </tr>
+   <tr class="ji">
+    <td>服务器语言：</td>
+    <td>{$sysInfo.language}</td>
+  </tr>
+  <tr class="ou">
+    <td>数据库版本：</td>
+    <td>{$sysInfo.mysql_version}</td>
+  </tr>
+   <tr class="ji">
+    <td>上传限制：</td>
+    <td>{$sysInfo.max_upload}</td>
+  </tr>
+  <tr class="ou">
+    <td>上传最大时间：</td>
+    <td>{$sysInfo.max_ex_time}</td>
+  </tr>
+</table>
+<script>var version='{$Think.config.cms_var}';</script>
+<include file="index:footer" />
+</body>
+</html>

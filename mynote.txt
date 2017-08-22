@@ -1,0 +1,299 @@
+1、 验证码测试地址： http://localhost/jzhpolice/index.php/index/captcha/index
+2、 登录地址：http://localhost/jzhpolice/index.php/index/login/index
+3、 测试签收列表 http://localhost/jizhpolice/index.php/index/news/getSignList/id/76
+4、 测试签收： http://localhost/jizhpolice/index.php/index/news/sign/id/76/userID/1/roleID/6
+5、 需要添加补充: 签收之前先要检查是否登录成功
+
+2017-07-16
+
+6、签收
+7、二级页面
+
+Array
+(
+    [user_no] => 1001
+    [name] => 石头
+    [register_time] => 1500206643
+    [phone] => 
+    [email] => 
+    [status] => 0
+    [id] => 7
+    [last_login_time] => 1500706331
+    [last_login_ip] => 0.0.0.0
+)
+
+href={:url('login/status','uid='.$newContext[0]['id'])}
+
+id title public_time is_sign
+
+
+
+2017-08-05
+1、cookie删不掉
+2、用户没有登录的时候，进入三级页面。执行status 函数 会出错 未定地 uid
+3、 签收时要检查用户是否是当前role下的用户
+4、newlist_wz 页面 返回给前台所有的页面和子页面 name 和 id
+
+2017-08-06
+修改日志
+1、News.php 用户签收函数 sign() 增加签收用户所在部门判断。
+2、Newslist.php index函数，返回所有模块和子模块name 和 id
+格式如下：
+Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => 图片新闻
+            [son] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 1
+                            [name] => 图片新闻
+                        )
+
+                )
+
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => 新闻动态
+            [son] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 2
+                            [name] => 通知通报
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 3
+                            [name] => 特别关注
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 4
+                            [name] => 领导讲话
+                        )
+
+                    [3] => Array
+                        (
+                            [id] => 5
+                            [name] => 公安信息
+                        )
+
+                    [4] => Array
+                        (
+                            [id] => 6
+                            [name] => 简报专刊
+                        )
+
+                )
+
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 晾晒平台
+            [son] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 7
+                            [name] => 执法晾晒
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 8
+                            [name] => 信访晾晒
+                        )
+
+                )
+
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => 情报共享
+            [son] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 9
+                            [name] => 每日警情
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 10
+                            [name] => 预警信息
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 11
+                            [name] => 情报分析
+                        )
+
+                )
+
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => 全局动态
+            [son] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 12
+                            [name] => 机关动态
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 13
+                            [name] => 刑侦动态
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 14
+                            [name] => 派出所动态
+                        )
+
+                )
+
+        )
+
+    [5] => Array
+        (
+            [id] => 6
+            [name] => 队伍建设
+            [son] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 15
+                            [name] => 队伍建设
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 16
+                            [name] => 经验交流
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 17
+                            [name] => 调查研究
+                        )
+
+                )
+
+        )
+
+    [6] => Array
+        (
+            [id] => 7
+            [name] => 常用文件
+            [son] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 18
+                            [name] => 规章制度
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 19
+                            [name] => 执法规范
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 20
+                            [name] => 重要文件
+                        )
+
+                )
+
+        )
+
+    [7] => Array
+        (
+            [id] => 8
+            [name] => 常用下载
+            [son] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 21
+                            [name] => 公安部、省厅、市局导航
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 22
+                            [name] => 全国、全省、全市、本局导航
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 23
+                            [name] => 公安部、省厅资源库导航
+                        )
+
+                )
+
+        )
+
+)
+
+
+2017-08-08
+签收时 需要添加签收者ID， 签收时间 以及签收IP ------------ 已经完成
+
+
+2017-08-08 晚
+前端用户界面
+1、需要签收的文件 在主要中应该有突出显示
+2、前端：特别关注、图片新闻、二级页面、常用链接还没有完成
+3、文件下载功能
+后台系统管理
+1、管理客体 
+  1、用户
+  2、文章
+  3、数据库资源
+2、管理客体1 --- 用户
+  用户分类  1、前端用户
+            2、各部门管理员
+            3、系统管理员
+
+3、文章管理
+        各部门不同文章对应不同模块 增删改查
+4、数据库管理
+          数据库灾备
+          数据库恢复
+
+权限说明：
+前端用户---- 浏览页面，登录前端，不可以登录后台
+各部门管理员 ----- 不可以登录前端， 可以登录后台，进行权限内的操作(自己模块中内容的增删改查)
+系统管理与啊 ---- 不可以登录前端， 可以登录后台，只能进行用户管理和数据库管理，不能进行文章管理
+
+区别实例中的RBAC策略 ，不去控制操作，只控制模块
+
+
+2017-08-09
+localhost/jizhpolice/index.php/index/newslist/index  链接有问题

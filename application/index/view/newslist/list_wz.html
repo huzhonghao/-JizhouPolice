@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+		<meta name="renderer" content="webkit">
+		<!--国产浏览器高速模式-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Yao Longfei" />
+		<!-- 作者 -->
+		<meta name="revised" content="Yao.v1, 2016/7/11" />
+		<!-- 定义页面的最新版本 -->
+		<meta name="description" content="网站简介" />
+		<!-- 网站简介 -->
+		<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+		<!-- 搜索关键字 -->
+		<title>冀州市公安局</title>
+		<!-- 基础样式文件 开始 -->
+		<link href="__CSS__/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="__CSS__/base.css" rel="stylesheet" type="text/css">
+		<link href="__CSS__/list_wz.css" rel="stylesheet" type="text/css">
+		<!-- 基础样式文件结束 -->
+		<!-- 基础JS文件 开始 -->
+		<script type="text/javascript" src="__JS__/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="__JS__/jquery.cookie.js"></script>
+		<script type="text/javascript" src="__JS__/bootstrap.min.js"></script>
+		<script type="text/javascript" src="__JS__/base.js"></script>
+		<!-- 基础JS文件 结束 -->
+	</head>
+
+	<body>
+			
+		<!-- main 开始 -->
+		<div class="main">
+			<div class="main_box">
+
+				<!-- logo 开始 -->
+				<div class="logo"></div>
+				<!-- logo 结束 -->
+
+				<!-- banner 开始 -->
+				<div class="banner">
+					<ul>
+						<li class="right_border"><a href={:url('index/index')}>网站首页</a></li>
+						<li class="right_border"><a href={:url('index/index')}>图片新闻</a></li>
+						<li class="right_border"><a href={:url('index/index')}>特别关注</a></li>
+						<li class="right_border"><a href={:url('index/index')}>晾晒平台</a></li>
+						<li class="right_border"><a href={:url('index/index')}>情报共享</a></li>
+						<li class="right_border"><a href={:url('index/index')}>公安信息</a></li>
+						<li class="right_border"><a href={:url('index/index')}>领导讲话</a></li>
+						<li class="right_border"><a href={:url('index/index')}>常用下载</a></li>
+						<li class="right_border"><a href={:url('index/index')}>友情链接</a></li>
+						<li><a href=""></a>机关动态</li>
+					</ul>
+				</div>
+				<!-- banner 结束 -->
+
+				<!-- address 开始 -->
+				<div class="address">
+					<img src="__IMG__/address_ico.png"/><a href={:url('index/index')}>首页</a><a>：</a><a href="javascript:void(0);">{$moduleInfo.name}</a><a>-</a><a href="javascript:void(0);">{$sonmoduleName.name}</a>
+				</div>
+				<!-- address 结束 -->
+
+
+						
+
+				<!-- list_main 开始 -->
+				<div class="list_main">
+					<!-- hot 开始 -->
+					<div class="hot">
+						<div class="hot_title">
+							
+						</div>
+						<div class="hot_content menu_list" id="firstpane">
+							<div class="hot_content_box">
+								<div class="hot_content_box_title">
+								<!-- 图片新闻 -->
+									<img src="__IMG__/hot_list_ico.png" /><a class="menu_head">
+									{$wholeModuleInfo[0]['name']}</a>
+								</div>
+								<div class="hot_content_box_content menu_body" style="display:none">
+									<ul>	
+										 <li><a href="#">{$wholeModuleInfo[0]['son'][0]['name']}</a></li> 
+									</ul>
+								</div>
+							</div>
+							<div class="hot_content_box">
+								<div class="hot_content_box_title">
+								<!-- 新闻动态 -->
+									<img src="__IMG__/hot_list_ico.png" /><a class="menu_head">{$wholeModuleInfo[1]['name']}</a>
+								</div>
+							    <div class="hot_content_box_content menu_body" style="display:none">
+							    	<ul>
+										<li><a href="#">{$wholeModuleInfo[1]['son'][0]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[1]['son'][1]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[1]['son'][2]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[1]['son'][3]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[1]['son'][4]['name']}</a></li>
+									</ul>
+								</div> 
+							</div>
+							<div class="hot_content_box">
+								<div class="hot_content_box_title">
+								<!-- 晾晒平台 -->
+									<img src="__IMG__/hot_list_ico.png" /><a class="menu_head">{$wholeModuleInfo[2]['name']}</a>
+								</div>
+								 <div class="hot_content_box_content menu_body" style="display:none">
+								 	<ul>
+										<li><a href="#">{$wholeModuleInfo[2]['son'][0]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[2]['son'][1]['name']}</a></li>
+									</ul>
+								</div> 
+							</div>
+							<div class="hot_content_box">
+								<div class="hot_content_box_title">
+								<!-- 情报共享 -->
+									<img src="__IMG__/hot_list_ico.png" /><a class="menu_head">{$wholeModuleInfo[3]['name']}</a>
+								</div>
+								<div class="hot_content_box_content menu_body" style="display:none">
+									<ul>
+										<li><a href="#">{$wholeModuleInfo[3]['son'][0]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[3]['son'][1]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[3]['son'][2]['name']}</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="hot_content_box">
+								<div class="hot_content_box_title">
+								<!-- 全局动态 -->
+									<img src="__IMG__/hot_list_ico.png" /><a class="menu_head">{$wholeModuleInfo[4]['name']}</a>
+								</div>
+								<div class="hot_content_box_content menu_body" style="display:none">
+									<ul>
+										<li><a href="#">{$wholeModuleInfo[4]['son'][0]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[4]['son'][1]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[4]['son'][2]['name']}</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="hot_content_box">
+								<div class="hot_content_box_title">
+								<!-- 队伍建设 -->
+									<img src="__IMG__/hot_list_ico.png" /><a class="menu_head">{$wholeModuleInfo[5]['name']}</a>
+								</div>
+								<div class="hot_content_box_content menu_body" style="display:none">
+									<ul>	
+										<li><a href="#">{$wholeModuleInfo[5]['son'][0]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[5]['son'][1]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[5]['son'][2]['name']}</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="hot_content_box">
+								<div class="hot_content_box_title">
+								<!-- 常用文件 -->
+									<img src="__IMG__/hot_list_ico.png" /><a class="menu_head">{$wholeModuleInfo[6]['name']}</a>
+								</div>
+								<div class="hot_content_box_content menu_body" style="display:none">
+									<ul>
+										<li><a href="#">{$wholeModuleInfo[6]['son'][0]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[6]['son'][1]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[6]['son'][2]['name']}</a></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="hot_content_box">
+								<div class="hot_content_box_title">
+								<!-- 常用下载 -->
+									<img src="__IMG__/hot_list_ico.png" /><a class="menu_head">{$wholeModuleInfo[7]['name']}</a>
+								</div>
+								<div class="hot_content_box_content menu_body" style="display:none">
+									<ul>	
+										<li><a href="#">{$wholeModuleInfo[7]['son'][0]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[7]['son'][1]['name']}</a></li>
+										<li><a href="#">{$wholeModuleInfo[7]['son'][2]['name']}</a></li>
+									</ul>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<!-- hot 结束 -->
+					<!-- list_con 开始 -->
+					<div class="list_con">
+						<div class="list_con_title">
+							<font>{$sonmoduleName.name}</font>
+						</div>
+						<div class="list_con_content">
+							<ul>
+								{volist name='list' id='item'}
+								    <li><a href={:url('news/index','id='.$item.id)}><img src="__IMG__/index/news_list_ico.png">{$item.title}</a><span>{$item.public_time}</span></li>
+								{/volist}
+							</ul>
+							<div class="page">
+								{$page}
+							</div>
+						</div>
+					</div>
+					<!-- hot 结束 -->
+				</div>
+				<!-- list_main 结束 -->
+
+				<!-- bottom_banner 开始 -->
+				<div class="bottom_banner">
+					<ul>
+						<li class="right_border">
+							<a href="">系统管理</a>
+						</li>
+						<li class="right_border">
+							<a href="">金山毒霸</a>
+						</li>
+						<li class="right_border">
+							<a href="">数字证书申请</a>
+						</li>
+						<li class="right_border">
+							<a href="">一机两用注册</a>
+						</li>
+						<li class="right_border">
+							<a href="">二手机系统</a>
+						</li>
+						<li class="right_border">
+							<a href="">生活资讯</a>
+						</li>
+						<li class="right_border">
+							<a href="">安全管理平台</a>
+						</li>
+						<li class="right_border">
+							<a href="">电子邮局</a>
+						</li>
+						<li class="right_border">
+							<a href="">FTP空间</a>
+						</li>
+						<li class="right_border">
+							<a href="">终端安全助手</a>
+						</li>
+						<li>
+							<a href="">故障申告</a>
+						</li>
+					</ul>
+				</div>
+				<!-- bottom_banner 结束 -->
+
+				<!-- bottom 开始 -->
+				<div class="bottom">
+					COPYRIGHT版权所有 设计开发：公安局信息通信处&信息中心
+				</div>
+				<!-- bottom 结束 -->
+			</div>
+		</div>
+		<!-- main 结束 -->
+		<!-- 脚本开始 -->
+		<!-- 隐藏操作类 -->
+		<input type="text" id="pageId" name="pageId" value={$moduleInfo.id}>
+		<input type="text" id="pageFatherId" name="pageFatherId" value={$sonmoduleName.id}>
+		<script type=text/javascript>
+		$(document).ready(function(){
+			
+			//获取当前选中模块
+			var moduleId = {$moduleInfo.id}-1;
+			//获取当前选中子模块名称
+			var sonModuleId = '{$sonmoduleName.name}';
+			
+			$("#firstpane .menu_body:eq("+moduleId+")").show();
+			//alert($("#firstpane .menu_body:eq("+moduleId+")").children("ul").html());
+			$("#firstpane .menu_body:eq("+moduleId+") li a").each(function(index){
+				if($(this).text()==sonModuleId){
+					$(this).css("color","red");
+				}
+			});
+			$("#firstpane a.menu_head").click(function(){
+				//alert($(this).parents().next("div.menu_body").html());
+				$(this).addClass("current").parents().next("div.menu_body").slideToggle(300);//.siblings("div.menu_body").slideUp("slow");
+				$("div.menu_body").not($(this).parents().next("div.menu_body")).slideUp("slow");
+				$(this).siblings().removeClass("current");
+			});
+			/* $("#secondpane .menu_body:eq(1)").show();
+			$("#secondpane p.menu_head").mouseover(function(){
+				$(this).addClass("current").next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+				$(this).siblings().removeClass("current");
+			}); */
+		});
+		
+		//选中样式
+		/* function current(whichObj){
+			//alert(whichObj);
+			for (var i = 0; i < document.links.length; i++){ 
+				document.links[i].style.backgroundColor = "#0D1A35";			 
+			} 
+				
+			if(whichObj!=null){
+				document.getElementById(whichObj).style.backgroundColor = "#1F8EFA";
+			}
+		} */
+		</script>
+	</body>
+
+</html>
